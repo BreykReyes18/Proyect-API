@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "172.30.249.47",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MYSQL-BRANDON",
+            "database": "prueba-ecommerce",
+            "username": "root"
+        }
+    ]
+}
