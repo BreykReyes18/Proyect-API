@@ -1,0 +1,44 @@
+<?php
+$servername = "172.30.249.47:3306";
+$username = "root";
+$password = "admin";
+$database = "prueba-ecommerce";
+
+// Obtener datos del formulario
+$Codigo = $_POST['Codigo'];
+$Nombre = $_POST['Nombre'];
+$Correo = $_POST['Correo'];
+$Clave = $_POST['Clave'];
+$IdRol = $_POST['IdRol'];
+
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Comprobar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Llamar al procedimiento almacenado
+$sql = "CALL SP_REGISTRARUSUARIO(?, ?, ?, ?, ?, @p_Resultado, @p_Mensaje)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("sssss", $Codigo, $Nombre, $Correo, $Clave, $IdRol);
+$stmt->execute();
+
+
+// Obtener el resultado del procedimiento almacenado
+$result = $conn->query("SELECT @p_IdUsuarioResultado AS IdUsuarioResultado, @p_Mensaje AS Mensaje");
+$row = $result->fetch_assoc();
+// Crear una respuesta en formato JSON
+$response = array(
+    'IdUsuarioResultado' => $row['IdUsuarioResultado'],
+    'mensaje' => $row['Mensaje']
+);
+
+// Devolver la respuesta como JSON
+header('Content-Type: application/json');
+echo json_encode($response);
+
+// Cerrar la conexión
+$conn->close();
+?>
