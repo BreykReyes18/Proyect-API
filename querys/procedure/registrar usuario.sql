@@ -3,6 +3,7 @@
 CREATE PROCEDURE SP_REGISTRARUSUARIO(
     IN p_Codigo VARCHAR(50),
     IN p_Nombre VARCHAR(100),
+    IN p_Cedula VARCHAR(15),
     IN p_Correo VARCHAR(100),
     IN p_Clave VARCHAR(100),
     IN p_IdRol INT,
@@ -19,8 +20,8 @@ BEGIN
     SELECT COUNT(*) INTO existe_usuario FROM usuario WHERE Codigo = p_Codigo;
 
     IF existe_usuario = 0 THEN
-        INSERT INTO usuario (Codigo, Nombre, Correo, Clave, IdRol, Estado) 
-        VALUES (p_Codigo, p_Nombre, p_Correo, p_Clave, p_IdRol, p_Estado);
+        INSERT INTO usuario (Codigo, Nombre, Cedula, Correo, Clave, IdRol, Estado) 
+        VALUES (p_Codigo, p_Nombre,p_Cedula, p_Correo, p_Clave, p_IdRol, p_Estado);
         
         SET p_IdUsuarioResultado = LAST_INSERT_ID();
     ELSE

@@ -5,18 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const Codigo = document.getElementById('Codigo').value;
-        const Nombre = document.getElementById('Nombre').value;
+        const Cedula = document.getElementById('Cedula').value;
+        const NombreCompleto = document.getElementById('NombreCompleto').value;
         const Correo = document.getElementById('Correo').value;
         const Clave = document.getElementById('Clave').value;
         const IdRol = document.getElementById('IdRol').value;
+        const Estado = document.getElementById('Estado').value;
 
         const data = new URLSearchParams();
-        data.append('Codigo', Codigo);
-        data.append('Nombre', Nombre);
+        data.append('Cedula', Cedula);
+        data.append('NombreCompleto', NombreCompleto);
         data.append('Correo', Correo);
         data.append('Clave', Clave);
         data.append('IdRol', IdRol);
+        data.append('Estado', Estado);
 
         fetch('registro.php', {
             method: 'POST',
