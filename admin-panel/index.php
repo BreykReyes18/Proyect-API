@@ -1,25 +1,27 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Example</title>
-    <!-- Enlace al CSS de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <h1>Ejemplo de Bootstrap</h1>
-        <p>Este es un ejemplo básico de cómo usar Bootstrap en tu proyecto.</p>
-        <button class="btn btn-primary">Botón de Bootstrap</button>
+<?php include("admin-panel/templates/header.php");?>
+
+<div class="row align-items-md-stretch">
+    <div class="col-md-12">
+        <div
+            class="h-100 p-5 text-white bg-primary border rounded-3"
+        >
+            <h2>Change the background</h2>
+            <p>
+                Swap the background-color utility and add a `.text-*` color
+                utility to mix up the jumbotron look. Then, mix and match with
+                additional component themes and more.
+            </p>
+            <button
+                class="btn btn-outline-primary"
+                type="button"
+            >
+                Example button
+            </button>
+        </div>
     </div>
+</div>
 
-    <!-- Scripts de dependencias JavaScript de Bootstrap (jQuery y Popper.js) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
-    <!-- Scripts de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
 
+<?php include("admin-panel/templates/footer.php");
+       
