@@ -36,7 +36,25 @@
     </form>
 
     <div id="mensaje"></div>
+    <script>
+        document.getElementById("registroForm").addEventListener("submit", function(event) {
+            event.preventDefault();
 
-    <script src="registro.js"></script>
+            var formData = new FormData(this);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "registrar_usuario.php", true);
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    document.getElementById("mensaje").innerText = response.mensaje;
+                }
+            };
+            xhr.onerror = function() {
+                console.error("Error al enviar la solicitud");
+            };
+            xhr.send(formData);
+        });
+    </script>
 </body>
 </html>
