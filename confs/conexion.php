@@ -1,5 +1,5 @@
 <?php
-$servername = "172.30.249.3:3306"; // Cambia esto si tu servidor MySQL está en otro lugar
+$servername = "localhost"; // Cambia esto si tu servidor MySQL está en otro lugar
 $username = "root"; // Nombre de usuario de MySQL
 $password = "admin"; // Contraseña de MySQL
 $database = "mercado"; // Nombre de la base de datos a la que quieres conectarte
