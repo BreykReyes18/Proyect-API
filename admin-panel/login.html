@@ -6,9 +6,7 @@
       <meta name="author" content="FullStackTeams">
       <title> Login </title>
       <!-- Style CSS -->
-      <link rel="stylesheet" href="./css/style2.css">
-      <!-- Demo CSS (No need to include it into your project) -->
-      <link rel="stylesheet" href="./css/demo.css">
+      <link rel="stylesheet" href="./style2.css">
       
    </head>
    <body>
@@ -16,39 +14,44 @@
          <h1> Login For ApiRestFull </h1>
          <p> Registrate en el Mercadito o inicia sesion. </p>
       </header>
+      <div id="mensaje"></div>
       <!--$%adsense%$-->
       <main class="cd__main">
          <!-- Start DEMO HTML (Use the following code into your project)-->
          <!--ring div starts here-->
-<div class="ring">
-  <i style="--clr:#00ff0a;"></i>
-  <i style="--clr:#ff0057;"></i>
-  <i style="--clr:#fffd44;"></i>
-  <div class="login">
-    <h2>Login</h2>
-    <div class="inputBx" href="./index.html">
-      <input type="text" placeholder="Username">
-    </div>
-    <div class="inputBx">
-      <input type="password" placeholder="Password">
-    </div>
-    <div class="inputBx">
-        <a href="./index.html">
-      <input type="submit" value="Sign in"></a>
-    </div>
-    <div class="links">
-      <a href="404p.html">Forget Password</a>
-      <a href="admin-panel/formulario.html">Signup</a>
+<form id="loginForm">
+  <div class="ring">
+    <i style="--clr:#00ff0a;"></i>
+    <i style="--clr:#ff0057;"></i>
+    <i style="--clr:#fffd44;"></i>
+    <div class="login">
+      <h2>Login</h2>
+      <div class="inputBx" href="./index.html">
+        <input id="Cedula" type="text" placeholder="Username">
+      </div>
+      <div class="inputBx">
+        <input id="Clave" type="password" placeholder="Password">
+      </div>
+      <div class="inputBx">
+          <a href="./index.html">
+        <input type="submit" value="Sign in"></a>
+      </div>
+      <div class="links">
+        <a href="404p.html">Forget Password</a>
+        <a href="./formulario.html">Signup</a>
+      </div>
     </div>
   </div>
-</div>
+  
+</form>
+
 <!--ring div ends here-->
          <!-- END EDMO HTML (Happy Coding!)-->
       </main>
       <footer class="cd__credit">FullStackTeams</a></footer>
       
       <!-- Script JS -->
-      <script src="./js/script.js"></script>
+      <script src="./login.js"></script>
       <!--$%analytics%$-->
    </body>
 </html>
