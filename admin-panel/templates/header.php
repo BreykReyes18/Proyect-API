@@ -1,3 +1,7 @@
+<?php
+$url_base="http://172.30.249.3/proyect-api/admin-panel/";
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -25,8 +29,8 @@
             <nav class="navbar navbar-expand navbar-light bg-light">
                 <div class="nav navbar-nav">
                     <a class="nav-item nav-link active" href="#" aria-current="page">Administrador <span class="visually-hidden">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Inicio</a>
-                    <a class="nav-item nav-link" href="#">Comercio</a>
+                    <!-- <a class="nav-item nav-link" href="<?=$url_base?>secciones/">Inicio</a> -->
+                    <a class="nav-item nav-link" href="<?=$url_base?>secciones/comercio">Comercio</a>
                     <a class="nav-item nav-link" href="#">Detalles de la tienda</a>
                     <a class="nav-item nav-link" href="#">Paginas</a>
                     <a class="nav-item nav-link" href="#">Contacto</a>
