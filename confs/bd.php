@@ -1,5 +1,5 @@
 <?php
-$servidor="localhost";
+$servidor="172.30.249.3";
 $baseDeDatos="mercado";
 $usuario="root";
 $contraseña="";
