@@ -12,6 +12,19 @@
             "name": "MYSQL-BRANDON",
             "database": "prueba-ecommerce",
             "username": "root"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "172.30.249.3",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "api",
+            "database": "mercado",
+            "username": "root"
         }
     ]
 }
