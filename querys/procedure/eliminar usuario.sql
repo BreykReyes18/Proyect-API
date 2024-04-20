@@ -12,16 +12,6 @@ BEGIN
     SET p_Mensaje = '';
 
     IF EXISTS (
-        SELECT * FROM COMPRA C 
-        INNER JOIN USUARIO U ON U.IdUsuario = C.IdUsuario
-        WHERE U.IDUSUARIO = p_IdUsuario
-    )
-    THEN
-        SET pasoreglas = 0;
-        SET p_Mensaje = CONCAT(p_Mensaje, 'No se puede eliminar porque el usuario se encuentra relacionado a una COMPRA\n');
-    END IF;
-
-    IF EXISTS (
         SELECT * FROM VENTA V
         INNER JOIN USUARIO U ON U.IdUsuario = V.IdUsuario
         WHERE U.IDUSUARIO = p_IdUsuario
