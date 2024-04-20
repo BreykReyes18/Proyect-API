@@ -1,8 +1,8 @@
 <?php
-$servername = "172.30.249.47"; // Cambia esto si tu servidor MySQL está en otro lugar
+$servername = "172.30.249.3:3306"; // Cambia esto si tu servidor MySQL está en otro lugar
 $username = "root"; // Nombre de usuario de MySQL
 $password = "admin"; // Contraseña de MySQL
-$database = "prueba-ecommerce"; // Nombre de la base de datos a la que quieres conectarte
+$database = "mercado"; // Nombre de la base de datos a la que quieres conectarte
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
