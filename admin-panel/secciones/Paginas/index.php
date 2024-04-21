@@ -2,6 +2,6 @@
 include("admin-panel/templates/header.php");
 ?>
 
-Listar Comercio
+Listar Pagina
 
 <?php include("admin-panel/templates/footer.php"); ?>

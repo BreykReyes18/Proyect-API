@@ -1,12 +1,12 @@
 <?php
-$servidor="172.30.249.3";
+$servidor="localhost";
 $baseDeDatos="mercado";
 $usuario="root";
-$contraseña="";
+$clave="admin";
 
 try {
 
-    $conexion=new PDO("mysql:host=$servidor;dbname=$baseDeDatos",$usuario,$contraseña);
+    $conexion=new PDO("mysql:host=$servidor;dbname=$baseDeDatos",$usuario,$clave);
     echo "Conexión exitosa";
 
 } catch (Exception $error) {

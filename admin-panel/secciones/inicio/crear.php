@@ -2,6 +2,6 @@
 include("admin-panel/templates/header.php");
 ?>
 
-Crear Comercio
+Crear Inicio
 
 <?php include("admin-panel/templates/footer.php"); ?>

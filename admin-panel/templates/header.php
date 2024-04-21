@@ -29,13 +29,13 @@ $url_base="http://172.30.249.3/proyect-api/admin-panel/";
             <nav class="navbar navbar-expand navbar-light bg-light">
                 <div class="nav navbar-nav">
                     <a class="nav-item nav-link active" href="#" aria-current="page">Administrador <span class="visually-hidden">(current)</span></a>
-                    <!-- <a class="nav-item nav-link" href="<?=$url_base?>secciones/">Inicio</a> -->
+                    <!-- <a class="nav-item nav-link" href="secciones/">Inicio</a> -->
                     <a class="nav-item nav-link" href="<?=$url_base?>secciones/comercio">Comercio</a>
-                    <a class="nav-item nav-link" href="#">Detalles de la tienda</a>
-                    <a class="nav-item nav-link" href="#">Paginas</a>
-                    <a class="nav-item nav-link" href="#">Contacto</a>
-                    <a class="nav-item nav-link" href="#">Configuraciones</a>
-                    <a class="nav-item nav-link" href="#">suarios</a>
+                    <a class="nav-item nav-link" href="<?=$url_base?>secciones/detallesdelatienda">Detalles de la tienda</a>
+                    <a class="nav-item nav-link" href="<?=$url_base?>secciones/paginas">Paginas</a>
+                    <a class="nav-item nav-link" href="<?=$url_base?>secciones/contacto">Contacto</a>
+                    <a class="nav-item nav-link" href="<?=$url_base?>secciones/configuraciones">Configuraciones</a>
+                    <a class="nav-item nav-link" href="<?=$url_base?>secciones/usuarios">Usuarios</a>
                 </div>
             </nav>
             
