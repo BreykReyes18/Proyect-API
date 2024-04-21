@@ -1,5 +1,5 @@
 <?php
-$url_base="http://172.30.249.3/proyect-api/admin-panel/";
+$url_base="http://localhost/proyect-api/admin-panel/";
 ?>
 
 <!doctype html>

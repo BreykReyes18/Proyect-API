@@ -1,4 +1,5 @@
-<?php include("admin-panel/templates/header.php");?>
+<?php 
+include("admin-panel/templates/header.php");?>
 
 <div class="row align-items-md-stretch">
     <div class="col-md-12">
