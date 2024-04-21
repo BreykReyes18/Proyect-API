@@ -1,5 +1,5 @@
 <?php
-include("./confs/bd.php");
+include("confs/conexion.php");
 ?>
 
 <!doctype html>
