@@ -1,19 +1,15 @@
 <?php
-$servername = "172.30.249.3"; // Cambia esto si tu servidor MySQL está en otro lugar
-$username = "root";
-$password = "admin";
-$database = "mercado";
+$servername = "localhost"; // Cambia esto si tu servidor MySQL está en otro lugar
+$username = "root"; // Nombre de usuario de MySQL
+$password = "admin"; // Contraseña de MySQL
+$database = "mercado"; // Nombre de la base de datos a la que quieres conectarte
 
-// Crear la conexión
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
-} else {
-    echo "¡Conexión exitosa!";
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    // Establecer el modo de error a excepción
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Conexión exitosa";
+} catch(PDOException $e) {
+    echo "Conexión fallida: " . $e->getMessage();
 }
-
-// Cerrar la conexión
-$conn->close();
 ?>
